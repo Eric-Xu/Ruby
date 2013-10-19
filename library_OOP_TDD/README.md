@@ -1,6 +1,6 @@
 # Description
 
-I used TDD to create two classes: Book and Library. The Book object stores a title, author, and category. The Library object stores a list of books, saves them to a YAML file, and allows us to fetch them by category.
+I used TDD to create two classes: `Book` and `Library`. The `Book` object stores a title, author, and category. The `Library` object stores a list of books, saves them to a YAML file, and allows them to be fetched by their category.
 
 # Dependencies
 
