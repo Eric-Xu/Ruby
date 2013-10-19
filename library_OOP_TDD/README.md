@@ -4,13 +4,12 @@ I used TDD to create two classes: `Book` and `Library`. The `Book` object stores
 
 # Dependencies
 
-  + [RSpec]
-
-  [RSpec]: http://rubygems.org/gems/rspec
+  + [RSpec](http://rubygems.org/gems/rspec)
+  + [Fuubar](http://rubygems.org/gems/fuubar)
 
 # Run
 
 ```
-gem install rspec
-rspec spec --format doc --color
+bundle install
+rspec spec
 ```
