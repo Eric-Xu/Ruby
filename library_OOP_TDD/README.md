@@ -7,7 +7,9 @@ I used TDD to create two classes: `Book` and `Library`. The `Book` object stores
   + [RSpec](http://rubygems.org/gems/rspec)
   + [Fuubar](http://rubygems.org/gems/fuubar)
 
-# Run
+# Test
+
+To run all the test:
 
 ```
 bundle install
