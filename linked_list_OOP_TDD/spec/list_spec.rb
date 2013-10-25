@@ -97,13 +97,85 @@ describe List do
 
 		context "when list has more than one node" do
 
-			before do
+			it "resets the head node" do
 				list.ptq(n2)
 				list.rtq
+				expect(list.head).to eq n1
+			end
+		end
+	end
+
+	describe "#each" do
+
+		let(:results) { [] }
+
+		context "when list is empty" do
+			specify { expect(list.each { |n| results << n }).to be_nil }
+		end
+
+		context "when nodes exist" do
+
+			it "iterates through a list" do
+				list.ptq(n1)
+				list.ptq(n2)
+				list.ptq(n3)
+				list.each { |n| results << n }
+				expect(results).to have(3).nodes
+			end
+		end
+	end
+
+	describe "#reverse" do
+
+		context "when list is empty" do
+
+			specify { expect(list.reverse).to be_nil }
+		end
+
+		context "when nodes exist" do
+
+			before do
+				list.ptq(n1)
+				list.ptq(n2)
+				list.ptq(n3)
+				list.reverse
 			end
 
-			it "resets the head node" do
-				expect(list.head).to eq n1
+			its(:head) { should eq n1 }
+
+			specify { expect(list.head.next).to eq n2 }
+
+			its(:tail) { should eq n3 }
+
+			its(:count) { should eq 3 }
+
+			# it { should eq n1 }
+		end
+	end
+
+	describe "#reverse!" do
+
+		context "when list is empty" do
+
+			specify { expect(list.reverse!).to be_nil }
+		end
+
+		context "when nodes exist" do
+
+			before do
+				list.ptq(n1)
+				list.ptq(n2)
+				list.ptq(n3)
+			end
+
+			let(:new_reversed_list) { list.reverse! }
+
+			specify { expect(new_reversed_list.head.data).to eq 1 }
+
+			specify { expect(new_reversed_list.tail.data).to eq 3 }
+
+			it "returns a new list" do
+				expect(new_reversed_list).not_to eq list.reverse
 			end
 		end
 	end

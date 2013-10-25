@@ -40,4 +40,38 @@ class List
 		@count -= 1
 		removed_node
 	end
+
+	def each
+		return if @head.nil?
+		node = @head
+		while node
+			yield node
+			node = node.next
+		end
+	end
+
+	def reverse!
+		return if @head.nil?
+		reversed = List.new
+		self.each do |node|
+			reversed.ptq(Node.new(node.data))
+		end
+		reversed
+	end
+
+	def reverse
+		return if @head.nil?
+		temp_tail = self.rtq
+		temp_tail.next = nil
+		@tail = temp_tail
+		@count += 1
+
+		while @head
+			node = self.rtq
+			node.next = temp_tail
+			temp_tail = node
+			@count += 1
+		end
+		@head = temp_tail
+	end
 end
