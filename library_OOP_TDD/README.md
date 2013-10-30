@@ -9,7 +9,7 @@ I used TDD to create two classes: `Book` and `Library`. The `Book` object stores
 
 # Test
 
-To run all the test:
+To run all the tests:
 
 ```
 bundle install

@@ -4,4 +4,5 @@ The code in these folders is intended for me to keep track of snippets of fun id
 
 # Playgrounds
 
-+ [library_OOP_TDD](https://github.com/Eric-Xu/Ruby/tree/master/library_OOP_TDD) Create a `Book` and a `Library` class using test-driven development.
+  + [library_OOP_TDD](https://github.com/Eric-Xu/Ruby/tree/master/library_OOP_TDD) Create a `Book` and a `Library` class using test-driven development.
+  + [linked_list_OOP_TDD](https://github.com/Eric-Xu/Ruby/tree/master/linked_list_OOP_TDD) Create methods to manipulate a singly linked list using test-driven development.
