@@ -74,4 +74,34 @@ class List
 		end
 		@head = temp_tail
 	end
+
+	def prev_node(node)
+		return if @count <= 1 || @head == node
+		previous = @head
+		self.each do |n|
+			previous = n if n.next == node
+		end
+		previous
+	end
+
+	def delete(target)
+		deleted_nodes = []
+		return deleted_nodes if @head.nil?
+		self.each do |n|
+			if n.data == target
+				deleted_nodes << n
+				@count -= 1
+				if n == @head && n == @tail
+					@head, @tail = nil, nil
+				elsif n == @head
+					@head = n.next
+				elsif n == @tail
+					@tail = prev_node(n)
+				else
+					prev_node(n).next = n.next
+				end
+			end
+		end
+		deleted_nodes
+	end
 end
