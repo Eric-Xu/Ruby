@@ -19,4 +19,16 @@ class Circle
 	def area
 		PI * r ** 2
 	end
+
+	def distance_from_center(circle)
+		sqrt((self.x - circle.x) ** 2 + (self.y - circle.y) ** 2)
+	end
+
+	def intersects?(circle)
+		distance_from_center(circle) < (self.r + circle.r)
+	end
+
+	def inside?(circle)
+		distance_from_center(circle) < (self.r - circle.r).abs
+	end
 end
