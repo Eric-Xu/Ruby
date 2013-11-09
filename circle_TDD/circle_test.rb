@@ -1,4 +1,5 @@
 require_relative "circle"
+require "minitest/spec"
 require "minitest/autorun"
 
 describe Circle do
