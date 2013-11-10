@@ -12,3 +12,15 @@ def fizzbuzz_long(n)
 		n.to_s
 	end
 end
+
+def caesar(s,n)s.gsub(/./){|c|l=c.ord;(l<97?(l+n-65)%26+65:(l+n-97)%26+97).chr}end
+# def caesar(s,n)s.gsub(/./){|c|t=c.ord+n;(t-1)&31>25&&t+=n<0?26:-26;t.chr}end
+
+def caesar_long(s,n)
+	r, x, y = "", "a".ord, "A".ord
+	s.each_char do |c|
+		l = c.ord
+		r << ( l<x ? (l+n-y)%26+y : (l+n-x)%26+x ).chr
+	end
+	r
+end
