@@ -11,6 +11,6 @@ A `Circle` class with x, y, r attributes and the following methods:
 
 # Test
 
-Unit tests are written using the minitest/spec testing framework. To run all the tests:
+Unit tests are written using the MiniTest::Spec testing framework packaged with Ruby 1.9+. To run all the tests:
 
     ruby circle_test.rb --verbose

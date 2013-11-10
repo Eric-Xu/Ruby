@@ -114,6 +114,6 @@ swingers([["Homer","Marge"],["Micky","Minnie"],["Fred","Wilma"],["Peter","Lois"]
 
 # Test
 
-Unit tests are written using the minitest/spec testing framework. To run all the tests:
+Unit tests are written using the MiniTest::Spec testing framework packaged with Ruby 1.9+. To run all the tests:
 
     ruby rg_test.rb --verbose
