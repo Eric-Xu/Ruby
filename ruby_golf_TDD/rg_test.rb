@@ -75,4 +75,15 @@ describe "instance methods" do
 			end
 		end
 	end
+
+	describe "#count" do
+
+		it "returns the letter frequency for a single word" do
+			count("Anagram", "A").must_equal 3
+		end
+
+		it "returns the word frequency for a string" do
+			count("CookieMonster loves cookie.","cookie").must_equal 2
+		end
+	end
 end

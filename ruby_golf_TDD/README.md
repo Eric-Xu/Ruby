@@ -37,8 +37,8 @@ rps("Scissors") => "Rock,Lose"
 Write a method that when given a string and substring, returns the number of times the substring occurs in that string (ignoring case).
 
 ```ruby
-count("Banana","a") => 3
-count("RubySource provides advice, tutorials, commentary, and insight into the Ruby and Rails ecosystem","ruby") => 2
+count("Anagram","a") => 3
+count("CookieMonster loves cookie.","cookie") => 2
 ```
 
 ### Hole 5: Swingers

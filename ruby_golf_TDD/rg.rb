@@ -39,3 +39,13 @@ def rps_long(m)
 		o == "Rock" ? "#{o},Lose" : "#{o},Win"
 	end
 end
+
+def count(s,q) s.scan(/#{q}/i).size end
+
+def count_long(s,q)
+	x, s, q = 0, s.downcase, q.downcase
+	while s.match(q)
+		x += 1 if s.slice!(q)
+	end
+	x
+end
