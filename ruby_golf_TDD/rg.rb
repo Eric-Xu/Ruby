@@ -24,3 +24,18 @@ def caesar_long(s,n)
 	end
 	r
 end
+
+def rps(m)o=%w(Rock Paper Scissors Rock);i=rand 3;"#{o[i]},#{o[i+1]==m ?:Win:o[i]==m ?:Draw: :Lose}"end
+
+def rps_long(m)
+	o = %w(Rock Paper Scissors).sample
+	return "#{o},Draw" if m == o
+	case m
+	when "Rock"
+		o == "Paper" ? "#{o},Lose" : "#{o},Win"
+	when "Paper"
+		o == "Scissors" ? "#{o},Lose" : "#{o},Win"
+	when "Scissors"
+		o == "Rock" ? "#{o},Lose" : "#{o},Win"
+	end
+end

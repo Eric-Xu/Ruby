@@ -45,4 +45,34 @@ describe "instance methods" do
 			end
 		end
 	end
+
+	describe "#rps" do
+
+		context "Rock" do
+
+			let(:correct_outcomes) { ["Rock,Draw", "Scissors,Win", "Paper,Lose"] }
+
+			it "returns correct outcome" do
+				correct_outcomes.must_include rps("Rock")
+			end
+		end
+
+		context "Paper" do
+
+			let(:correct_outcomes) { ["Paper,Draw", "Rock,Win", "Scissors,Lose"] }
+
+			it "returns correct outcome" do
+				correct_outcomes.must_include rps("Paper")
+			end
+		end
+
+		context "Scissors" do
+
+			let(:correct_outcomes) { ["Scissors,Draw", "Paper,Win", "Rock,Lose"] }
+
+			it "returns correct outcome" do
+				correct_outcomes.must_include rps("Scissors")
+			end
+		end
+	end
 end

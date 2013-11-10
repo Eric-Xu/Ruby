@@ -24,13 +24,12 @@ Implement a Caesar Shift Cipher
 
 ### Hole 3: Rock, Paper, Scissors
 
-Write a simple method that "plays" this game, where the player enters their "move" as an argument to the method. If the player enters an invalid option then the result should be "lose". The computer should choose its move at random. The output gives the computer’s "move" and the result as a comma-separated string.
+Write a simple "rps" method that plays this game, where the player enters their "move" as an argument to the method. If the player enters an invalid option then the result should be "lose". The computer should choose its move at random. The output gives the computer’s "move" and the result as a comma-separated string.
 
 ```ruby
-play("Rock") => "Rock,Draw"
-play("Paper") => "Rock,Win"
-play("Scissors") => "Rock,Lose"
-play("Soap") => "Paper,Lose"
+rps("Rock") => "Rock,Draw"
+rps("Paper") => "Rock,Win"
+rps("Scissors") => "Rock,Lose"
 ```
 
 ### Hole 4: String Counter
