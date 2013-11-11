@@ -49,3 +49,14 @@ def count_long(s,q)
 	end
 	x
 end
+
+def swingers(p)m,f=p.transpose;m.zip f.rotate end
+
+def swingers_long(p)
+	guys, gals = [], []
+	p.each do |e|
+		guys << e[0]
+		gals << e[1]
+	end
+	guys.zip gals.unshift(gals.pop)
+end

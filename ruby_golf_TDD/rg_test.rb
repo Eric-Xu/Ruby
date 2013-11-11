@@ -86,4 +86,33 @@ describe "instance methods" do
 			count("CookieMonster loves cookie.","cookie").must_equal 2
 		end
 	end
+
+	describe "#swingers" do
+
+		it "mixes keys and values" do
+			swingers([
+				["Homer","Marge"],
+				["Micky","Minnie"]
+			]).must_include(
+				["Homer","Minnie"]
+			)
+
+			swingers([
+				["Homer","Marge"],
+				["Micky","Minnie"],
+				["Fred","Wilma"]
+			]).wont_include(
+				["Fred","Wilma"]
+			)
+		end
+
+		it "only matches different genders" do
+			swingers([
+				["Homer","Marge"],
+				["Fred","Wilma"]
+			]).wont_include(
+				["Homer","Fred"]
+			)
+		end
+	end
 end
